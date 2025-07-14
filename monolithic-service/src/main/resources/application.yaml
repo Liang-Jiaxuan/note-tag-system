@@ -1,0 +1,94 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        domain: localhost
+
+spring:
+  application:
+    name: NoteTagService #服务名称
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://${example.db.host}:3306/${example.db.dbname}?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${example.db.pw}
+  #session过期时间
+  session:
+    timeout: 86400
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  data:
+    redis:
+      port: 6379
+      host: 192.168.18.129
+      database: 1
+      password: 1617929300
+  rabbitmq:
+    host: 192.168.18.129
+    port: 5672
+    username: guest
+    password: 123456
+    virtual-host: /
+    # 连接池配置
+    connection-timeout: 60000
+    # 心跳检测
+    heartbeat: 60
+    # 发布确认
+    publisher-confirm-type: correlated
+    # 发布返回
+    publisher-returns: true
+    # 自动重连
+    listener:
+      simple:
+        # 手动确认
+        acknowledge-mode: manual
+        # 预取数量
+        prefetch: 1
+        # 并发消费者数量
+        concurrency: 1
+        max-concurrency: 10
+        retry:
+          enabled: true
+          initial-interval: 1000
+          max-attempts: 3
+          multiplier: 1.0
+          max-interval: 10000
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.example.notetagbatchmanagement.domain.po
+  global-config:
+    db-config:
+      update-strategy: not_null
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+logging:
+  level:
+    com.example: debug
+    org.apache.shiro: DEBUG
+    com.example.userreachservice: DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
+knife4j:
+  enable: true
+  openapi:
+    title: 笔记标签批量管理接口文档
+    description: 笔记标签批量管理接口文档
+    version: v1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.example.notetagbatchmanagement.controller

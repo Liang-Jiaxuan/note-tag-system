@@ -1,0 +1,362 @@
+00:00:01:734 DEBUG 2144 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:01:739 DEBUG 2144 --- [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:01:751 DEBUG 2144 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:01:751 DEBUG 2144 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:01:752 DEBUG 2144 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:01:775 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:01:775 DEBUG 2144 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:01:784 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:01:785 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:01:785 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:01:791 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:01:792 DEBUG 2144 --- [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:01:800 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:01:800 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:01:800 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:01:860 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:01:861 DEBUG 2144 --- [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:01:871 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:01:872 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:01:872 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:01:946 DEBUG 2144 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:00:01:947 DEBUG 2144 --- [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:00:01:961 DEBUG 2144 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:01:961 DEBUG 2144 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:00:01:962 DEBUG 2144 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:04:933 DEBUG 2144 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:04:933 DEBUG 2144 --- [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:04:940 DEBUG 2144 --- [http-nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:04:940 DEBUG 2144 --- [http-nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:04:940 DEBUG 2144 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:04:940 DEBUG 2144 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:00:04:940 DEBUG 2144 --- [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:00:04:944 DEBUG 2144 --- [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:04:944 DEBUG 2144 --- [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:00:04:944 DEBUG 2144 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:04:951 DEBUG 2144 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:00:04:951 DEBUG 2144 --- [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:00:04:957 DEBUG 2144 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:04:957 DEBUG 2144 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:00:04:957 DEBUG 2144 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:10:793 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:00:10:793 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:00:10:794 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:00:10:794 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:00:10:810 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:00:10:810 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:00:10:810 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:00:40:814 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:00:40:814 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:00:40:814 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:00:40:814 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:00:40:830 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:00:40:830 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:00:40:830 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:01:10:833 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:01:10:833 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:01:10:834 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:01:10:834 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:01:10:836 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:01:10:836 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:01:10:836 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:01:40:840 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:01:40:840 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:01:40:840 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:01:40:840 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:01:40:856 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:01:40:856 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:01:40:856 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:02:10:867 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:02:10:867 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:02:10:867 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:02:10:867 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:02:10:872 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:02:10:872 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:02:10:872 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:02:40:874 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:02:40:874 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:02:40:874 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:02:40:874 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:02:40:878 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:02:40:878 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:02:40:878 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:03:10:880 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:03:10:880 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:03:10:898 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:03:10:898 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:03:10:898 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:03:10:914 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:03:10:914 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:03:40:905 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:03:40:905 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:03:40:921 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:03:40:921 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:03:40:921 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:03:40:937 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:03:40:937 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:04:10:927 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:04:10:927 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:04:10:943 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:04:10:943 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:04:10:943 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:04:10:959 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:04:10:959 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:04:40:952 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:04:40:952 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:04:40:967 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:04:40:967 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:04:40:967 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:04:40:983 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:04:40:983 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:05:10:973 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:05:10:973 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:05:10:989 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:05:10:989 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:05:10:989 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:05:11:005 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:05:11:005 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:05:39:903 DEBUG 2144 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:39:904 DEBUG 2144 --- [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:39:924 DEBUG 2144 --- [http-nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:39:925 DEBUG 2144 --- [http-nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:39:926 DEBUG 2144 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:39:947 DEBUG 2144 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:39:947 DEBUG 2144 --- [http-nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:39:956 DEBUG 2144 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:39:956 DEBUG 2144 --- [http-nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:39:957 DEBUG 2144 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:39:961 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:39:961 DEBUG 2144 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:39:976 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:39:977 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:39:977 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:40:035 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:40:035 DEBUG 2144 --- [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:40:047 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:40:047 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:40:048 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:40:122 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:05:40:122 DEBUG 2144 --- [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:05:40:134 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:40:134 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:05:40:135 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:40:991 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:05:40:991 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:05:41:007 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:05:41:007 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:05:41:007 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:05:41:023 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:05:41:023 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:05:43:149 DEBUG 2144 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:43:149 DEBUG 2144 --- [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:43:154 DEBUG 2144 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:43:154 DEBUG 2144 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:43:154 DEBUG 2144 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:43:160 DEBUG 2144 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:43:161 DEBUG 2144 --- [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:43:167 DEBUG 2144 --- [http-nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:43:167 DEBUG 2144 --- [http-nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:43:167 DEBUG 2144 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:43:174 DEBUG 2144 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:05:43:174 DEBUG 2144 --- [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:05:43:187 DEBUG 2144 --- [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:43:187 DEBUG 2144 --- [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:05:43:187 DEBUG 2144 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:47:222 DEBUG 2144 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:47:223 DEBUG 2144 --- [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:47:228 DEBUG 2144 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:47:228 DEBUG 2144 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:47:228 DEBUG 2144 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:47:233 DEBUG 2144 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:05:47:233 DEBUG 2144 --- [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:05:47:239 DEBUG 2144 --- [http-nio-8081-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:47:239 DEBUG 2144 --- [http-nio-8081-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:05:47:239 DEBUG 2144 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:47:239 DEBUG 2144 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:05:47:239 DEBUG 2144 --- [http-nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:05:47:245 DEBUG 2144 --- [http-nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:47:251 DEBUG 2144 --- [http-nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:05:47:251 DEBUG 2144 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:06:11:024 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:06:11:024 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:06:11:039 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:06:11:039 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:06:11:039 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:06:11:055 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:06:11:055 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:06:41:056 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:06:41:056 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:06:41:072 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:06:41:072 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:06:41:072 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:06:41:088 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:06:41:088 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:06:50:422 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:06:50:422 DEBUG 2144 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:06:50:425 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:06:50:425 DEBUG 2144 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:06:50:425 DEBUG 2144 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:06:50:433 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/user-permissions", parameters={}
+00:06:50:433 DEBUG 2144 --- [http-nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#getUserPermissionsByToken(String)
+00:06:50:438 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:06:50:438 DEBUG 2144 --- [http-nio-8081-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data={permissions=[Permission(permId=9, permName=删除个人笔记, permCode=note:delete:o (truncated)...]
+00:06:50:438 DEBUG 2144 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:06:50:444 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/permissions/validate?permission=like%3Atoggle", parameters={masked}
+00:06:50:445 DEBUG 2144 --- [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authservice.controller.PermissionController#validatePermission(String, String)
+00:06:50:450 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:06:50:450 DEBUG 2144 --- [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=true, message=ok, description=)]
+00:06:50:450 DEBUG 2144 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:07:11:082 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:07:11:082 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:07:11:098 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:07:11:098 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:07:11:098 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:07:11:113 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:07:11:113 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:07:41:103 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:07:41:103 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:07:41:118 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:07:41:118 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:07:41:118 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:07:41:134 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:07:41:134 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:08:11:123 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:08:11:123 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:08:11:139 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:08:11:139 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:08:11:139 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:08:11:154 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:08:11:154 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:08:41:142 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:08:41:142 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:08:41:158 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:08:41:158 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:08:41:158 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:08:41:174 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:08:41:174 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:09:11:160 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:09:11:161 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:09:11:163 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:09:11:176 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:09:11:176 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:09:11:179 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:09:11:179 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:09:41:174 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:09:41:174 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:09:41:189 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:09:41:189 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:09:41:189 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:09:41:205 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:09:41:205 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:10:11:192 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:10:11:192 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:10:11:195 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:10:11:209 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:10:11:209 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:10:11:210 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:10:11:210 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:10:41:199 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:10:41:199 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:10:41:214 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:10:41:214 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:10:41:214 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:10:41:230 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:10:41:230 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:11:11:225 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:11:11:225 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:11:11:243 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:11:11:243 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:11:11:243 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:11:11:259 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:11:11:259 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:11:41:258 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:11:41:258 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:11:41:274 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:11:41:274 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:11:41:274 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:11:41:290 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:11:41:290 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:12:11:277 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:12:11:277 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:12:11:280 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:12:11:291 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:12:11:291 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:12:11:295 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:12:11:295 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:12:41:283 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:12:41:283 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:12:41:303 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:12:41:303 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:12:41:303 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:12:41:319 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:12:41:319 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:13:11:331 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:13:11:331 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:13:11:331 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:13:11:331 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:13:11:347 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:13:11:347 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:13:11:347 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:13:41:360 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:13:41:360 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:13:41:360 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:13:41:360 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:13:41:376 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:13:41:376 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:13:41:376 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:14:11:395 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:14:11:395 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:14:11:395 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:14:11:395 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:14:11:411 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:14:11:411 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:14:11:411 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:14:41:415 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:14:41:415 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:14:41:423 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:14:41:423 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:14:41:423 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:14:41:438 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:14:41:438 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:15:11:449 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:15:11:449 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:15:11:450 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:15:11:450 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:15:11:466 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:15:11:466 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:15:11:466 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:15:41:468 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:15:41:468 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:15:41:484 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:15:41:484 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:15:41:484 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:15:41:500 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:15:41:500 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:16:11:499 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:16:11:499 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:16:11:514 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:16:11:514 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:16:11:514 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:16:11:530 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:16:11:530 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:16:41:530 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:16:41:530 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:16:41:546 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:16:41:546 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:16:41:546 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:16:41:561 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:16:41:561 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:17:11:557 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:17:11:557 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:17:11:573 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:17:11:573 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:17:11:573 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:17:11:589 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:17:11:589 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:17:41:577 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : HTTP PUT http://localhost:8761/eureka/apps/AUTH-SERVICE/auth-service:8081?status=UP&lastDirtyTimestamp=1752507099383
+00:17:41:577 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:17:41:592 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : HTTP GET http://localhost:8761/eureka/apps/delta
+00:17:41:592 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Accept=[application/json, application/*+json]
+00:17:41:592 DEBUG 2144 --- [DiscoveryClient-HeartbeatExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:17:41:608 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Response 200 OK
+00:17:41:608 DEBUG 2144 --- [DiscoveryClient-CacheRefreshExecutor-0] org.springframework.web.HttpLogging      : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]

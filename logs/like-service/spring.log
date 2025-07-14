@@ -1,0 +1,621 @@
+00:00:01:614 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:00:01:763 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:01:770 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:00:01:770 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@6c335ffb].
+00:00:01:770 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:00:01:771 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:00:01:771 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@6c335ffb].  Returned account [tom]
+00:00:01:771 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:00:01:786 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@565e6996].
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:00:01:800 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@565e6996].  Returned account [tom]
+00:00:01:858 DEBUG 23716 --- [http-nio-8083-exec-6] o.apache.shiro.web.servlet.SimpleCookie  : Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 13-Jul-2025 16:00:01 GMT; SameSite=lax]
+00:00:01:858 DEBUG 23716 --- [http-nio-8083-exec-6] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:00:01:873 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:01:874 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:00:01:874 DEBUG 23716 --- [http-nio-8083-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:00:01:880 DEBUG 23716 --- [http-nio-8083-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:00:01:963 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:00:01:972  INFO 23716 --- [http-nio-8083-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+00:00:02:088  INFO 23716 --- [http-nio-8083-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+00:00:02:088  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:00:02:088  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:00:02:124 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:00:02:141 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:00:02:169 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 0
+00:00:02:169  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: null
+00:00:02:169  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : 用户未点赞，执行添加点赞操作
+00:00:02:169 DEBUG 23716 --- [http-nio-8083-exec-6] .L.selectByUserIdAndNoteIdIncludeDeleted : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ?
+00:00:02:169 DEBUG 23716 --- [http-nio-8083-exec-6] .L.selectByUserIdAndNoteIdIncludeDeleted : ==> Parameters: 2(Long), 1(Long)
+00:00:02:169 DEBUG 23716 --- [http-nio-8083-exec-6] .L.selectByUserIdAndNoteIdIncludeDeleted : <==      Total: 1
+00:00:02:181  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : 查询到的逻辑删除记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-14T23:52:57, deleted=1)
+00:00:02:181  INFO 23716 --- [http-nio-8083-exec-6] c.e.l.service.impl.LikeServiceImpl       : 存在逻辑删除记录，恢复点赞
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.mapper.LikeMapper.updateById       : ==>  Preparing: UPDATE `like` SET user_id=?, note_id=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.mapper.LikeMapper.updateById       : ==> Parameters: 2(Long), 1(Long), 2025-07-14T16:31:16(LocalDateTime), 2025-07-15T00:00:02.181398200(LocalDateTime), 1(Long)
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.mapper.LikeMapper.updateById       : <==    Updates: 0
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.incrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count + 1, updated_at = NOW() WHERE note_id = ?
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.incrementLikeCount             : ==> Parameters: 1(Long)
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.incrementLikeCount             : <==    Updates: 1
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:00:02:197 DEBUG 23716 --- [http-nio-8083-exec-6] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:00:02:230 DEBUG 23716 --- [http-nio-8083-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:02:230 DEBUG 23716 --- [http-nio-8083-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=true, likeCount=7, message=点赞成功), message=o (truncated)...]
+00:00:02:230 DEBUG 23716 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:04:931 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@6b1c9b0f].
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@6b1c9b0f].  Returned account [tom]
+00:00:04:940 DEBUG 23716 --- [http-nio-8083-exec-4] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:00:04:950 DEBUG 23716 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:00:04:951 DEBUG 23716 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:00:04:951 DEBUG 23716 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:00:04:951 DEBUG 23716 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:00:04:963  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:00:04:963  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 0
+00:00:04:963  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: null
+00:00:04:963  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 用户未点赞，执行添加点赞操作
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] .L.selectByUserIdAndNoteIdIncludeDeleted : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ?
+00:00:04:963 DEBUG 23716 --- [http-nio-8083-exec-4] .L.selectByUserIdAndNoteIdIncludeDeleted : ==> Parameters: 2(Long), 1(Long)
+00:00:04:970 DEBUG 23716 --- [http-nio-8083-exec-4] .L.selectByUserIdAndNoteIdIncludeDeleted : <==      Total: 1
+00:00:04:970  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 查询到的逻辑删除记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-14T23:52:57, deleted=1)
+00:00:04:970  INFO 23716 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 存在逻辑删除记录，恢复点赞
+00:00:04:970 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.mapper.LikeMapper.updateById       : ==>  Preparing: UPDATE `like` SET user_id=?, note_id=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.mapper.LikeMapper.updateById       : ==> Parameters: 2(Long), 1(Long), 2025-07-14T16:31:16(LocalDateTime), 2025-07-15T00:00:04.970133500(LocalDateTime), 1(Long)
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.mapper.LikeMapper.updateById       : <==    Updates: 0
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.incrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count + 1, updated_at = NOW() WHERE note_id = ?
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.incrementLikeCount             : ==> Parameters: 1(Long)
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.incrementLikeCount             : <==    Updates: 1
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:00:04:971 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:00:04:976 DEBUG 23716 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:00:04:980 DEBUG 23716 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:00:04:981 DEBUG 23716 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=true, likeCount=8, message=点赞成功), message=o (truncated)...]
+00:00:04:982 DEBUG 23716 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:00:20:267 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:00:20:267 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:00:20:267 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:00:20:267 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:00:20:283 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:00:20:283 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:00:20:285 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:00:50:294 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:00:50:294 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:00:50:295 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:00:50:295 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:00:50:313 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:00:50:313 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:00:50:313 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:01:20:329 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:01:20:329 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:01:20:330 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:01:20:330 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:01:20:346 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:01:20:346 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:01:20:346 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:01:50:359 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:01:50:359 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:01:50:360 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:01:50:360 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:01:50:362 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:01:50:362 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:01:50:362 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:02:20:365 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:02:20:365 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:02:20:365 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:02:20:366 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:02:20:382 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:02:20:382 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:02:20:382 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:02:50:383 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:02:50:383 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:02:50:399 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:02:50:399 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:02:50:399 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:02:50:415 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:02:50:415 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:03:20:407 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:03:20:408 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:20:420 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:03:20:421 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:03:20:421 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:20:449 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:03:20:449 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:03:50:436 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752508790260
+00:03:50:436 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:50:452 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:03:50:452 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:50:452 DEBUG 23716 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:03:50:468 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:03:50:468 DEBUG 23716 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:03:51:350  INFO 23716 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LIKE-SERVICE with eureka with status DOWN
+00:03:51:350  INFO 23716 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1752509031350, current=DOWN, previous=UP]
+00:03:51:350  INFO 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LIKE-SERVICE/like-service:8083: registering service...
+00:03:51:350 DEBUG 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/LIKE-SERVICE
+00:03:51:350 DEBUG 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:51:350 DEBUG 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = like-service:8083, appName = LIKE-SERVICE, hostName = 192.168.74.1, status = DOWN, ipAddr = 192.168.74.1, port = 8083, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@7d85c58d] as "application/json"
+00:03:51:350 DEBUG 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+00:03:51:350  INFO 23716 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LIKE-SERVICE/like-service:8083 - registration status: 204
+00:03:51:366  INFO 23716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+00:03:51:381  INFO 23716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+00:03:51:381  INFO 23716 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+00:03:54:385  INFO 23716 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+00:03:54:385 DEBUG 23716 --- [SpringApplicationShutdownHook] o.s.web.client.RestTemplate              : HTTP DELETE http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083
+00:03:54:385 DEBUG 23716 --- [SpringApplicationShutdownHook] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:03:54:402 DEBUG 23716 --- [SpringApplicationShutdownHook] o.s.web.client.RestTemplate              : Response 200 OK
+00:03:54:402  INFO 23716 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LIKE-SERVICE/like-service:8083 - deregister  status: 200
+00:03:54:402  INFO 23716 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+00:05:26:504  INFO 20652 --- [main] c.e.likeservice.LikeServiceApplication   : Starting LikeServiceApplication using Java 17.0.12 on DESKTOP-OIP6B7L with PID 20652 (D:\code\JavaCode\SecondIntern\like-service\target\classes started by 16179 in D:\code\JavaCode\SecondIntern)
+00:05:26:504 DEBUG 20652 --- [main] c.e.likeservice.LikeServiceApplication   : Running with Spring Boot v2.7.18, Spring v5.3.31
+00:05:26:504  INFO 20652 --- [main] c.e.likeservice.LikeServiceApplication   : The following 1 profile is active: "dev"
+00:05:27:215  INFO 20652 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ae1a40e-b4c7-37c7-9008-5022c214c8a0
+00:05:27:356  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.com.example.likeservice.LikeServiceApplication.FeignClientSpecification' of type [org.springframework.cloud.openfeign.FeignClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:356  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'auth-service.FeignClientSpecification' of type [org.springframework.cloud.openfeign.FeignClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:356  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'note-service.FeignClientSpecification' of type [org.springframework.cloud.openfeign.FeignClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:356  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.openfeign.FeignAutoConfiguration' of type [org.springframework.cloud.openfeign.FeignAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:356  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'feignContext' of type [org.springframework.cloud.openfeign.FeignContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:372  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:372  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:372  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$567/0x000001aabf401598] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:372  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:372  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'feign.client-org.springframework.cloud.openfeign.FeignClientProperties' of type [org.springframework.cloud.openfeign.FeignClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:388  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'feign.encoder-org.springframework.cloud.openfeign.support.FeignEncoderProperties' of type [org.springframework.cloud.openfeign.support.FeignEncoderProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.openfeign.loadbalancer.DefaultFeignLoadBalancerConfiguration' of type [org.springframework.cloud.openfeign.loadbalancer.DefaultFeignLoadBalancerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:404  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig$$EnhancerBySpringCGLIB$$3f172ccc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancedRetryFactory' of type [org.springframework.cloud.loadbalancer.blocking.retry.BlockingLoadBalancedRetryFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'feignRetryClient' of type [org.springframework.cloud.openfeign.loadbalancer.RetryableFeignBlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.openfeign.FeignAutoConfiguration$DefaultFeignTargeterConfiguration' of type [org.springframework.cloud.openfeign.FeignAutoConfiguration$DefaultFeignTargeterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:419  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'feignTargeter' of type [org.springframework.cloud.openfeign.DefaultTargeter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:435  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.common.client.AuthServiceClient' of type [jdk.proxy2.$Proxy95] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:435  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.example.common.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:435  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'tokenFilter' of type [com.example.common.filter.TokenFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:435  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'likeServiceShiroConfig' of type [com.example.likeservice.config.LikeServiceShiroConfig$$EnhancerBySpringCGLIB$$522039a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:466  INFO 20652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:05:27:612  INFO 20652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+00:05:27:628  INFO 20652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:05:27:628  INFO 20652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+00:05:27:715  INFO 20652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:05:27:715  INFO 20652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1180 ms
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.spring.web.ShiroFilterFactoryBean  : Creating Shiro Filter instance.
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/test/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/test/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/test/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/likes/test/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/likes/test/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/likes/test/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/likes/count/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/likes/count/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/likes/count/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/doc.html] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/doc.html] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/doc.html] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/webjars/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/webjars/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/webjars/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/v3/api-docs/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/v3/api-docs/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/v3/api-docs/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/swagger-resources/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/swagger-resources/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/swagger-resources/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/swagger-ui/**] with global filters [invalidRequest] and from String definition [anon]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/swagger-ui/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/swagger-ui/**] to filter [anon] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/**] with global filters [invalidRequest] and from String definition [token]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/**] to filter [token] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/**] with global filters [invalidRequest] and from String definition [authc]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/**] to filter [invalidRequest] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/**] to filter [authc] with config [null]
+00:05:27:730 DEBUG 20652 --- [main] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'requestContextFilter'
+00:05:27:746 DEBUG 20652 --- [main] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'formContentFilter'
+00:05:27:746 DEBUG 20652 --- [main] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'characterEncodingFilter'
+00:05:27:841  INFO 20652 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'note-service' URL not provided. Will try picking an instance via load-balancing.
+00:05:28:214 DEBUG 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+00:05:28:373 DEBUG 20652 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+00:05:28:407 DEBUG 20652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+00:05:28:407 DEBUG 20652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui/**] in 'resourceHandlerMapping'
+00:05:28:423 DEBUG 20652 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+00:05:29:044  INFO 20652 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+00:05:29:239  WARN 20652 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+00:05:29:317  INFO 20652 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+00:05:29:333  INFO 20652 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+00:05:29:333  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+00:05:29:387 DEBUG 20652 --- [main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+00:05:29:434 DEBUG 20652 --- [main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:05:29:450 DEBUG 20652 --- [main] o.s.web.client.RestTemplate              : Response 200 OK
+00:05:29:450 DEBUG 20652 --- [main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:05:29:466  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+00:05:29:466  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+00:05:29:466  INFO 20652 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+00:05:29:466  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1752509129466 with initial instances count: 3
+00:05:29:466  INFO 20652 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LIKE-SERVICE with eureka with status UP
+00:05:29:466  INFO 20652 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1752509129466, current=UP, previous=STARTING]
+00:05:29:466  INFO 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LIKE-SERVICE/like-service:8083: registering service...
+00:05:29:484 DEBUG 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/LIKE-SERVICE
+00:05:29:484 DEBUG 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:05:29:484 DEBUG 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = like-service:8083, appName = LIKE-SERVICE, hostName = 192.168.74.1, status = UP, ipAddr = 192.168.74.1, port = 8083, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@5d2d9459] as "application/json"
+00:05:29:484  INFO 20652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+00:05:29:484  INFO 20652 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+00:05:29:500 DEBUG 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+00:05:29:500  INFO 20652 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LIKE-SERVICE/like-service:8083 - registration status: 204
+00:05:29:767  INFO 20652 --- [main] c.e.likeservice.LikeServiceApplication   : Started LikeServiceApplication in 3.685 seconds (JVM running for 4.087)
+00:05:35:204  INFO 20652 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:05:35:204  INFO 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:05:35:204 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+00:05:35:204 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+00:05:35:204 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+00:05:35:204 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@702eddc1
+00:05:35:220 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1818a7d7
+00:05:35:220 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+00:05:35:220  INFO 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+00:05:35:238 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/doc.html", parameters={}
+00:05:35:241 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+00:05:35:241 DEBUG 20652 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+00:05:35:625 DEBUG 20652 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources", parameters={}
+00:05:35:626 DEBUG 20652 --- [http-nio-8083-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+00:05:35:643 DEBUG 20652 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json]
+00:05:35:645 DEBUG 20652 --- [http-nio-8083-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[springfox.documentation.swagger.web.SwaggerResource@17fc45f8]]
+00:05:35:650 DEBUG 20652 --- [http-nio-8083-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:35:656 DEBUG 20652 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+00:05:35:657 DEBUG 20652 --- [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.oas.web.OpenApiControllerWebMvc#getDocumentation(String, HttpServletRequest)
+00:05:35:700 DEBUG 20652 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/hal+json]
+00:05:35:706 DEBUG 20652 --- [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@7ab70a62]
+00:05:35:707 DEBUG 20652 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:39:799 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:05:39:935 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:39:941 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:05:39:942 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@59e312bb].
+00:05:39:942 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:05:39:942 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:05:39:942 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@59e312bb].  Returned account [tom]
+00:05:39:942 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:05:39:957 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:39:978 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:39:979 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:05:39:979 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@51c91c42].
+00:05:39:979 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:05:39:979 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:05:39:979 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@51c91c42].  Returned account [tom]
+00:05:40:033 DEBUG 20652 --- [http-nio-8083-exec-5] o.apache.shiro.web.servlet.SimpleCookie  : Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 13-Jul-2025 16:05:40 GMT; SameSite=lax]
+00:05:40:033 DEBUG 20652 --- [http-nio-8083-exec-5] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:05:40:049 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:40:051 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:05:40:051 DEBUG 20652 --- [http-nio-8083-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:05:40:055 DEBUG 20652 --- [http-nio-8083-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:05:40:138 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:05:40:149  INFO 20652 --- [http-nio-8083-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+00:05:40:269  INFO 20652 --- [http-nio-8083-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+00:05:40:285  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:05:40:285  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:05:40:301 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:05:40:333 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:05:40:349 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 0
+00:05:40:365  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: null
+00:05:40:365  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 用户未点赞，执行添加点赞操作
+00:05:40:365 DEBUG 20652 --- [http-nio-8083-exec-5] .L.selectByUserIdAndNoteIdIncludeDeleted : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ?
+00:05:40:365 DEBUG 20652 --- [http-nio-8083-exec-5] .L.selectByUserIdAndNoteIdIncludeDeleted : ==> Parameters: 2(Long), 1(Long)
+00:05:40:365 DEBUG 20652 --- [http-nio-8083-exec-5] .L.selectByUserIdAndNoteIdIncludeDeleted : <==      Total: 1
+00:05:40:365  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 查询到的逻辑删除记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-14T23:52:57, deleted=1)
+00:05:40:373  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 存在逻辑删除记录，恢复点赞
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.LikeMapper.updateLikeDeleted     : ==>  Preparing: UPDATE `like` SET deleted = ?, updated_at = ? WHERE id = ?
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.LikeMapper.updateLikeDeleted     : ==> Parameters: 0(Short), 2025-07-15T00:05:40.373406200(LocalDateTime), 1(Long)
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.LikeMapper.updateLikeDeleted     : <==    Updates: 1
+00:05:40:374  INFO 20652 --- [http-nio-8083-exec-5] c.e.l.service.impl.LikeServiceImpl       : 恢复点赞更新结果: 1
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.incrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count + 1, updated_at = NOW() WHERE note_id = ?
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.incrementLikeCount             : ==> Parameters: 1(Long)
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.incrementLikeCount             : <==    Updates: 1
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:05:40:374 DEBUG 20652 --- [http-nio-8083-exec-5] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:05:40:386 DEBUG 20652 --- [http-nio-8083-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:40:386 DEBUG 20652 --- [http-nio-8083-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=true, likeCount=9, message=点赞成功), message=o (truncated)...]
+00:05:40:386 DEBUG 20652 --- [http-nio-8083-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:43:148 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@24fa3ee6].
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@24fa3ee6].  Returned account [tom]
+00:05:43:154 DEBUG 20652 --- [http-nio-8083-exec-4] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:05:43:167 DEBUG 20652 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:43:167 DEBUG 20652 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:05:43:167 DEBUG 20652 --- [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:05:43:167 DEBUG 20652 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:05:43:188 DEBUG 20652 --- [http-nio-8083-exec-4] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:05:43:189  INFO 20652 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:05:43:190  INFO 20652 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:05:43:191 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:05:43:192 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:05:43:193 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 1
+00:05:43:194  INFO 20652 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-15T00:05:40, deleted=0)
+00:05:43:194  INFO 20652 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 用户已点赞，执行取消点赞操作
+00:05:43:194 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.LikeMapper.updateLikeDeleted     : ==>  Preparing: UPDATE `like` SET deleted = ?, updated_at = ? WHERE id = ?
+00:05:43:195 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.LikeMapper.updateLikeDeleted     : ==> Parameters: 1(Short), 2025-07-15T00:05:43.194440800(LocalDateTime), 1(Long)
+00:05:43:196 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.LikeMapper.updateLikeDeleted     : <==    Updates: 1
+00:05:43:196  INFO 20652 --- [http-nio-8083-exec-4] c.e.l.service.impl.LikeServiceImpl       : 取消点赞更新结果: 1
+00:05:43:197 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.decrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count - 1, updated_at = NOW() WHERE note_id = ? AND like_count > 0
+00:05:43:197 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.decrementLikeCount             : ==> Parameters: 1(Long)
+00:05:43:198 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.decrementLikeCount             : <==    Updates: 1
+00:05:43:199 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:05:43:199 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:05:43:201 DEBUG 20652 --- [http-nio-8083-exec-4] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:05:43:206 DEBUG 20652 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:43:207 DEBUG 20652 --- [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=false, likeCount=8, message=取消点赞成功), messag (truncated)...]
+00:05:43:207 DEBUG 20652 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:47:217 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@6bd33070].
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:05:47:228 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@6bd33070].  Returned account [tom]
+00:05:47:233 DEBUG 20652 --- [http-nio-8083-exec-7] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:05:47:239 DEBUG 20652 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:05:47:239 DEBUG 20652 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:05:47:239 DEBUG 20652 --- [http-nio-8083-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:05:47:239 DEBUG 20652 --- [http-nio-8083-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:05:47:251 DEBUG 20652 --- [http-nio-8083-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:05:47:252  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:05:47:252  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:05:47:252 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:05:47:253 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:05:47:253 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 0
+00:05:47:254  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: null
+00:05:47:254  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 用户未点赞，执行添加点赞操作
+00:05:47:254 DEBUG 20652 --- [http-nio-8083-exec-7] .L.selectByUserIdAndNoteIdIncludeDeleted : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ?
+00:05:47:254 DEBUG 20652 --- [http-nio-8083-exec-7] .L.selectByUserIdAndNoteIdIncludeDeleted : ==> Parameters: 2(Long), 1(Long)
+00:05:47:255 DEBUG 20652 --- [http-nio-8083-exec-7] .L.selectByUserIdAndNoteIdIncludeDeleted : <==      Total: 1
+00:05:47:255  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 查询到的逻辑删除记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-15T00:05:43, deleted=1)
+00:05:47:255  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 存在逻辑删除记录，恢复点赞
+00:05:47:256 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.LikeMapper.updateLikeDeleted     : ==>  Preparing: UPDATE `like` SET deleted = ?, updated_at = ? WHERE id = ?
+00:05:47:256 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.LikeMapper.updateLikeDeleted     : ==> Parameters: 0(Short), 2025-07-15T00:05:47.255607500(LocalDateTime), 1(Long)
+00:05:47:257 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.LikeMapper.updateLikeDeleted     : <==    Updates: 1
+00:05:47:257  INFO 20652 --- [http-nio-8083-exec-7] c.e.l.service.impl.LikeServiceImpl       : 恢复点赞更新结果: 1
+00:05:47:258 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.incrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count + 1, updated_at = NOW() WHERE note_id = ?
+00:05:47:258 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.incrementLikeCount             : ==> Parameters: 1(Long)
+00:05:47:258 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.incrementLikeCount             : <==    Updates: 1
+00:05:47:258 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:05:47:259 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:05:47:259 DEBUG 20652 --- [http-nio-8083-exec-7] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:05:47:264 DEBUG 20652 --- [http-nio-8083-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:05:47:264 DEBUG 20652 --- [http-nio-8083-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=true, likeCount=9, message=点赞成功), message=o (truncated)...]
+00:05:47:265 DEBUG 20652 --- [http-nio-8083-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:05:59:487 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:05:59:487 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:05:59:487 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:05:59:493 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:05:59:502 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:05:59:503 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:05:59:503 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:06:29:519 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:06:29:519 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:06:29:520 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:06:29:520 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:06:29:536 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:06:29:536 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:06:29:538 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:06:50:419 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.s.web.mgt.CookieRememberMeManager    : SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [tom] from doGetAuthenticationInfo
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [tom].  Submitted token: [com.example.common.auth.TokenAuthenticationToken@48aaa0b7].
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.s.a.c.SimpleCredentialsMatcher       : Performing credentials equality check for tokenCredentials of type [java.lang.String and accountCredentials of type [java.lang.String]
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.s.a.c.SimpleCredentialsMatcher       : Both credentials arguments can be easily converted to byte arrays.  Performing array equals comparison
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [com.example.common.auth.TokenAuthenticationToken@48aaa0b7].  Returned account [tom]
+00:06:50:425 DEBUG 20652 --- [http-nio-8083-exec-8] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+00:06:50:438 DEBUG 20652 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.util.Map<java.lang.String, java.lang.Object>>]
+00:06:50:438 DEBUG 20652 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/likes/toggle", parameters={}
+00:06:50:438 DEBUG 20652 --- [http-nio-8083-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.likeservice.controller.LikeController#toggleLike(LikeRequest, HttpServletRequest)
+00:06:50:438 DEBUG 20652 --- [http-nio-8083-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LikeRequest(noteId=1)]
+00:06:50:450 DEBUG 20652 --- [http-nio-8083-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.example.common.response.BaseResponse<java.lang.Boolean>]
+00:06:50:456  INFO 20652 --- [http-nio-8083-exec-8] c.e.l.service.impl.LikeServiceImpl       : === toggleLike 被调用 ===
+00:06:50:457  INFO 20652 --- [http-nio-8083-exec-8] c.e.l.service.impl.LikeServiceImpl       : 用户ID: 2, 笔记ID: 1
+00:06:50:457 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByUserIdAndNoteId        : ==>  Preparing: SELECT id, user_id, note_id, created_at, updated_at, deleted FROM `like` WHERE user_id = ? AND note_id = ? AND deleted = 0
+00:06:50:457 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByUserIdAndNoteId        : ==> Parameters: 2(Long), 1(Long)
+00:06:50:457 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByUserIdAndNoteId        : <==      Total: 1
+00:06:50:457  INFO 20652 --- [http-nio-8083-exec-8] c.e.l.service.impl.LikeServiceImpl       : 查询到的点赞记录: Like(id=1, userId=2, noteId=1, createdAt=2025-07-14T16:31:16, updatedAt=2025-07-15T00:05:47, deleted=0)
+00:06:50:457  INFO 20652 --- [http-nio-8083-exec-8] c.e.l.service.impl.LikeServiceImpl       : 用户已点赞，执行取消点赞操作
+00:06:50:457 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.LikeMapper.updateLikeDeleted     : ==>  Preparing: UPDATE `like` SET deleted = ?, updated_at = ? WHERE id = ?
+00:06:50:462 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.LikeMapper.updateLikeDeleted     : ==> Parameters: 1(Short), 2025-07-15T00:06:50.457716200(LocalDateTime), 1(Long)
+00:06:50:463 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.LikeMapper.updateLikeDeleted     : <==    Updates: 1
+00:06:50:463  INFO 20652 --- [http-nio-8083-exec-8] c.e.l.service.impl.LikeServiceImpl       : 取消点赞更新结果: 1
+00:06:50:463 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.decrementLikeCount             : ==>  Preparing: UPDATE like_statistics SET like_count = like_count - 1, updated_at = NOW() WHERE note_id = ? AND like_count > 0
+00:06:50:463 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.decrementLikeCount             : ==> Parameters: 1(Long)
+00:06:50:463 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.decrementLikeCount             : <==    Updates: 1
+00:06:50:468 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByNoteId                 : ==>  Preparing: SELECT id, note_id, like_count, created_at, updated_at FROM like_statistics WHERE note_id = ?
+00:06:50:468 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByNoteId                 : ==> Parameters: 1(Long)
+00:06:50:468 DEBUG 20652 --- [http-nio-8083-exec-8] c.e.l.m.L.selectByNoteId                 : <==      Total: 1
+00:06:50:474 DEBUG 20652 --- [http-nio-8083-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+00:06:50:475 DEBUG 20652 --- [http-nio-8083-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [BaseResponse(code=0, data=LikeResponse(noteId=1, isLiked=false, likeCount=8, message=取消点赞成功), messag (truncated)...]
+00:06:50:475 DEBUG 20652 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+00:06:59:542 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:06:59:542 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:06:59:542 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:06:59:542 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:06:59:558 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:06:59:558 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:06:59:558 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:07:29:562 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:07:29:562 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:07:29:562 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:07:29:562 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:07:29:577 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:07:29:577 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:07:29:577 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:07:59:591 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:07:59:591 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:07:59:591 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:07:59:591 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:07:59:609 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:07:59:609 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:07:59:609 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:08:29:619 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:08:29:619 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:08:29:620 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:08:29:620 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:08:29:635 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:08:29:635 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:08:29:635 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:08:59:642 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:08:59:642 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:08:59:642 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:08:59:642 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:08:59:659 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:08:59:659 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:08:59:661 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:09:29:662 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:09:29:662 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:09:29:664 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:09:29:664 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:09:29:668 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:09:29:668 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:09:29:668 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:09:59:681 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:09:59:681 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:09:59:681 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:09:59:681 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:09:59:690 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:09:59:690 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:09:59:690 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:10:29:361  INFO 20652 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+00:10:29:706 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:10:29:706 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:10:29:706 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:10:29:706 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:10:29:722 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:10:29:722 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:10:29:723 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:10:59:741 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:10:59:741 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:10:59:741 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:10:59:741 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:10:59:747 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:10:59:747 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:10:59:747 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:11:29:756 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:11:29:756 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:11:29:756 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:11:29:756 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:11:29:772 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:11:29:772 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:11:29:773 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:11:59:778 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:11:59:778 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:11:59:779 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:11:59:779 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:11:59:785 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:11:59:785 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:11:59:785 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:12:29:794 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:12:29:794 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:12:29:795 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:12:29:795 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:12:29:810 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:12:29:810 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:12:29:810 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:12:59:819 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:12:59:819 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:12:59:819 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:12:59:819 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:12:59:835 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:12:59:835 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:12:59:835 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:13:29:839 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:13:29:839 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:13:29:854 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:13:29:854 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:13:29:854 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:13:29:870 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:13:29:870 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:13:59:879 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:13:59:879 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:13:59:880 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:13:59:880 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:13:59:896 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:13:59:896 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:13:59:896 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:14:29:904 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:14:29:904 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:14:29:904 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:14:29:904 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:14:29:920 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:14:29:920 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:14:29:920 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:14:59:923 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:14:59:923 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:14:59:926 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:14:59:926 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:14:59:926 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:14:59:929 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:14:59:929 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:15:29:377  INFO 20652 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+00:15:29:934 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:15:29:934 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:15:29:934 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:15:29:934 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:15:29:938 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:15:29:938 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:15:29:938 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:15:59:941 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:15:59:941 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:15:59:941 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:15:59:941 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:15:59:958 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:15:59:958 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:15:59:958 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:16:29:967 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:16:29:967 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:16:29:968 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:16:29:968 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:16:29:984 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:16:29:984 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:16:29:984 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:16:59:991 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:16:59:991 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:16:59:991 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:16:59:991 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:17:00:006 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:17:00:006 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:17:00:006 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:17:30:014 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:17:30:014 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:17:30:014 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:17:30:014 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:17:30:029 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:17:30:029 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:17:30:029 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+00:18:00:032 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/LIKE-SERVICE/like-service:8083?status=UP&lastDirtyTimestamp=1752509129466
+00:18:00:032 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:18:00:048 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+00:18:00:048 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+00:18:00:048 DEBUG 20652 --- [DiscoveryClient-HeartbeatExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:18:00:063 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Response 200 OK
+00:18:00:063 DEBUG 20652 --- [DiscoveryClient-CacheRefreshExecutor-0] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]

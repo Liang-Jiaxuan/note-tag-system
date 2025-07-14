@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b891cbfe-2290-4b95-9f06-2dafababc826" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2zOxuCSQIzmAc131ePhvrxiXbfj" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/JavaCode/SecondIntern/common-service/src/main/java/com/example/common/response&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.111187845&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24186456&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e3d52f0ef4eda39389274e89b9bbe378&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\JavaCode\SecondIntern\common-service\src\main\java\com\example\common\response" />
+      <recent name="D:\code\JavaCode\SecondIntern\common-service\src\main\java\com\example\common" />
+      <recent name="D:\code\JavaCode\SecondIntern\note-service\src\main\java\com\example\noteservice\controller" />
+      <recent name="D:\code\JavaCode\SecondIntern\note-service\src\main\java\com\example\noteservice\service\impl" />
+      <recent name="D:\code\JavaCode\SecondIntern\note-service\src\main\java\com\example\noteservice\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\JavaCode\SecondIntern" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.common.filter" />
+      <recent name="com.example.common.auth" />
+      <recent name="com.example.common.enums" />
+      <recent name="com.example.authservice.aspect" />
+      <recent name="com.example.authservice.annotation" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
+    <configuration name="NoteTagServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-tag-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.notetagbatchmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.notetagbatchmanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.example.notetagbatchmanagement.NoteTagServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoteTagServiceImplTest.testBatchAddTagsToNotes_Duplicate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-tag-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.notetagbatchmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.notetagbatchmanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.example.notetagbatchmanagement.NoteTagServiceImplTest" />
+      <option name="METHOD_NAME" value="testBatchAddTagsToNotes_Duplicate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoteTagServiceImplTest.testBatchAddTagsToNotes_TransactionRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-tag-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.notetagbatchmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.notetagbatchmanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.example.notetagbatchmanagement.NoteTagServiceImplTest" />
+      <option name="METHOD_NAME" value="testBatchAddTagsToNotes_TransactionRollback" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_NonExistent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-tag-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.notetagbatchmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.notetagbatchmanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.example.notetagbatchmanagement.NoteTagServiceImplTest" />
+      <option name="METHOD_NAME" value="testBatchRemoveTagsFromNotes_NonExistent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-tag-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.notetagbatchmanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.notetagbatchmanagement" />
+      <option name="MAIN_CLASS_NAME" value="com.example.notetagbatchmanagement.NoteTagServiceImplTest" />
+      <option name="METHOD_NAME" value="testBatchRemoveTagsFromNotes_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LikeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="like-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.likeservice.LikeServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoteServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="note-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.noteservice.NoteServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecondInternApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
+      <module name="note-tag-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.notetagbatchmanagement.SecondInternApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.NoteTagServiceImplTest" />
+      <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchAddTagsToNotes_Duplicate" />
+      <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchAddTagsToNotes_TransactionRollback" />
+      <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_NonExistent" />
+      <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_Success" />
+      <item itemvalue="Spring Boot.NoteServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.LikeServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.SecondInternApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.NoteTagServiceImplTest" />
+        <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchAddTagsToNotes_TransactionRollback" />
+        <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchAddTagsToNotes_Duplicate" />
+        <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_Success" />
+        <item itemvalue="JUnit.NoteTagServiceImplTest.testBatchRemoveTagsFromNotes_NonExistent" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b891cbfe-2290-4b95-9f06-2dafababc826" name="Changes" comment="" />
+      <created>1751616142326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751616142326</updated>
+      <workItem from="1751616143878" duration="2237000" />
+      <workItem from="1751687425452" duration="20466000" />
+      <workItem from="1751782150482" duration="10202000" />
+      <workItem from="1751797536938" duration="617000" />
+      <workItem from="1752055736678" duration="6000" />
+      <workItem from="1752128522786" duration="657000" />
+      <workItem from="1752134768444" duration="5112000" />
+      <workItem from="1752216389151" duration="12422000" />
+      <workItem from="1752246256748" duration="29000" />
+      <workItem from="1752290246791" duration="10779000" />
+      <workItem from="1752311221807" duration="32000" />
+      <workItem from="1752311263821" duration="425000" />
+      <workItem from="1752311698337" duration="247000" />
+      <workItem from="1752311953492" duration="50000" />
+      <workItem from="1752312019275" duration="1702000" />
+      <workItem from="1752321830517" duration="7194000" />
+      <workItem from="1752387723644" duration="23323000" />
+      <workItem from="1752418399142" duration="2578000" />
+      <workItem from="1752475386027" duration="18183000" />
+      <workItem from="1752504669669" duration="4394000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

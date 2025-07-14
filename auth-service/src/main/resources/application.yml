@@ -1,0 +1,80 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service #服务名称
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/auth_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1617929300
+  #session过期时间
+  session:
+    timeout: 86400
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.example.authservice.domain.po
+  global-config:
+    db-config:
+      update-strategy: not_null
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# Eureka客户端配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true    # 注册到Eureka
+    fetch-registry: true          # 从Eureka获取注册表
+  instance:
+    prefer-ip-address: true       # 使用IP地址
+    instance-id: ${spring.application.name}:${server.port}  # 实例ID
+    appname: ${spring.application.name}  # 应用名称
+
+
+logging:
+  level:
+    # 减少Eureka相关日志
+    com.netflix.eureka: WARN
+    com.netflix.discovery: WARN
+    org.springframework.cloud.netflix.eureka: WARN
+    # 减少Spring Cloud相关日志
+    org.springframework.cloud: WARN
+    # 减少RestTemplate日志
+    org.springframework.web.client.RestTemplate: WARN
+    # 保留业务日志
+    com.example: debug
+    org.apache.shiro: DEBUG
+    com.example.authservice: DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
+
+knife4j:
+  enable: true
+  openapi:
+    title: 认证微服务接口文档
+    description: 认证微服务接口文档
+    version: v1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.example.authservice.controller

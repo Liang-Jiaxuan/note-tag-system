@@ -1,0 +1,76 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: like-service #服务名称
+  profiles:
+    active: dev
+  datasource:
+    # 主数据源配置（like_db）
+    primary:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/like_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 1617929300
+    # 认证数据源配置（auth_db）
+    auth:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/auth_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 1617929300
+  #session过期时间
+  session:
+    timeout: 86400
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.example.likeservice.domain.po
+  global-config:
+    db-config:
+      update-strategy: not_null
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# Eureka客户端配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true    # 注册到Eureka
+    fetch-registry: true          # 从Eureka获取注册表
+  instance:
+    prefer-ip-address: true       # 使用IP地址
+    instance-id: ${spring.application.name}:${server.port}  # 实例ID
+    appname: ${spring.application.name}  # 应用名称
+
+logging:
+  level:
+    com.example: debug
+    org.apache.shiro: DEBUG
+    com.example.likeservice: DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
+
+knife4j:
+  enable: true
+  openapi:
+    title: 点赞微服务接口文档
+    description: 点赞微服务接口文档
+    version: v1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.example.likeservice.controller 

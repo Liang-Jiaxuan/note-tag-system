@@ -1,0 +1,5 @@
+example:
+  db:
+    host: 127.0.0.1 # 修改为你自己的虚拟机IP地址
+    pw: 1617929300 # 修改为docker中的MySQL密码
+    dbname: second_intern

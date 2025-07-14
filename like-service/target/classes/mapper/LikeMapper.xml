@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.likeservice.mapper.LikeMapper">
+
+    <!-- 结果映射 -->
+    <resultMap id="BaseResultMap" type="com.example.likeservice.domain.po.Like">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="userId" jdbcType="BIGINT"/>
+        <result column="note_id" property="noteId" jdbcType="BIGINT"/>
+        <result column="created_at" property="createdAt" jdbcType="TIMESTAMP"/>
+        <result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP"/>
+        <result column="deleted" property="deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <!-- 基础字段 -->
+    <sql id="Base_Column_List">
+        id, user_id, note_id, created_at, updated_at, deleted
+    </sql>
+
+    <!-- 根据用户ID和笔记ID查询点赞记录 -->
+    <select id="selectByUserIdAndNoteId" resultMap="BaseResultMap">
+        SELECT 
+        <include refid="Base_Column_List"/>
+        FROM `like`
+        WHERE user_id = #{userId} 
+        AND note_id = #{noteId} 
+        AND deleted = 0
+    </select>
+
+    <!-- 根据用户ID和笔记ID查询点赞记录（包括已删除的） -->
+    <select id="selectByUserIdAndNoteIdIncludeDeleted" resultMap="BaseResultMap">
+        SELECT 
+        <include refid="Base_Column_List"/>
+        FROM `like`
+        WHERE user_id = #{userId} 
+        AND note_id = #{noteId}
+    </select>
+
+    <!-- 更新点赞记录的删除状态 -->
+    <update id="updateLikeDeleted">
+        UPDATE `like` 
+        SET deleted = #{deleted}, 
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+</mapper> 
