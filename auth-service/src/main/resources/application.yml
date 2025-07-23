@@ -45,7 +45,6 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}  # 实例ID
     appname: ${spring.application.name}  # 应用名称
 
-
 logging:
   level:
     # 减少Eureka相关日志

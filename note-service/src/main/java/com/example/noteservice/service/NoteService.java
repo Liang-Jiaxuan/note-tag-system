@@ -17,4 +17,7 @@ public interface NoteService {
     Boolean deleteNote(Long id);
     IPage<NoteDTO> getNotesByPage(Page<Note> page, String keyword);
     IPage<NoteDTO> getNotesByPage(Page<Note> page);
+    List<NoteDTO> getPopularNotes(Integer limit, Integer minLikes, Integer days);
+
+    IPage<NoteDTO> getPopularNotesByPage(Page<Note> page, Integer minLikes, Integer days);
 }

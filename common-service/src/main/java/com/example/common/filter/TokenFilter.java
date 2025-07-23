@@ -4,6 +4,7 @@ import com.example.common.auth.TokenAuthenticationToken;
 import com.example.common.client.AuthServiceClient;
 import com.example.common.context.TokenContext;
 import com.example.common.response.BaseResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.util.StringUtils;
 import org.apache.shiro.web.filter.authc.AuthenticatingFilter;
@@ -15,8 +16,11 @@ import org.springframework.stereotype.Component;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Component
 public class TokenFilter extends AuthenticatingFilter implements ApplicationContextAware {
 

@@ -41,4 +41,29 @@
         AND like_count > 0
     </update>
 
+    <select id="selectPopularNoteIdsByThreshold" resultType="java.lang.Long">
+        SELECT note_id
+        FROM like_statistics
+        WHERE like_count >= #{minLikes}
+          AND created_at >= DATE_SUB(NOW(), INTERVAL #{days} DAY)
+        ORDER BY like_count DESC
+            LIMIT #{limit}
+    </select>
+
+    <select id="selectPopularNoteIdsByPage" resultType="java.lang.Long">
+        SELECT note_id
+        FROM like_statistics
+        WHERE like_count >= #{minLikes}
+          AND created_at >= DATE_SUB(NOW(), INTERVAL #{days} DAY)
+        ORDER BY like_count DESC
+            LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectPopularNotesCount" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM like_statistics
+        WHERE like_count >= #{minLikes}
+          AND created_at >= DATE_SUB(NOW(), INTERVAL #{days} DAY)
+    </select>
+
 </mapper> 

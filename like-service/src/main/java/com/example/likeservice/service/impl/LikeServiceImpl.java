@@ -1,7 +1,5 @@
 package com.example.likeservice.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.common.response.BaseResponse;
 import com.example.likeservice.domain.dto.LikeRequest;
 import com.example.likeservice.domain.dto.LikeResponse;
 import com.example.likeservice.domain.po.Like;
@@ -10,12 +8,12 @@ import com.example.likeservice.mapper.LikeMapper;
 import com.example.likeservice.mapper.LikeStatisticsMapper;
 import com.example.likeservice.service.LikeService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -124,5 +122,38 @@ public class LikeServiceImpl implements LikeService {
     public Boolean isUserLiked(Long noteId, Long userId) {
         Like existingLike = likeMapper.selectByUserIdAndNoteId(userId, noteId);
         return existingLike != null;
+    }
+
+    @Override
+    public List<Long> getPopularNoteIds(Integer limit, Integer minLikes, Integer days) {
+        // 设置默认值
+        if (limit == null) limit = 20;
+        if (minLikes == null) minLikes = 5;
+        if (days == null) days = 30;
+
+        return likeStatisticsMapper.selectPopularNoteIdsByThreshold(limit, minLikes, days);
+    }
+
+    @Override
+    public List<Long> getPopularNoteIdsByPage(Long current, Long size, Integer minLikes, Integer days) {
+        // 设置默认值
+        if (minLikes == null) minLikes = 5;
+        if (days == null) days = 30;
+        if (current == null) current = 1L;
+        if (size == null) size = 10L;
+
+        // 计算偏移量
+        Long offset = (current - 1) * size;
+
+        return likeStatisticsMapper.selectPopularNoteIdsByPage(offset, size, minLikes, days);
+    }
+
+    @Override
+    public Long getPopularNotesCount(Integer minLikes, Integer days) {
+        // 设置默认值
+        if (minLikes == null) minLikes = 10;
+        if (days == null) days = 30;
+
+        return likeStatisticsMapper.selectPopularNotesCount(minLikes, days);
     }
 } 

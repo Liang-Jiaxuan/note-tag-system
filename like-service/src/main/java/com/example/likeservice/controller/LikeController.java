@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -134,5 +135,38 @@ public class LikeController {
             log.error("Feign调用note-service失败", e);
             return ResultUtils.error(ErrorCode.SYSTEM_ERROR, "Feign调用note-service失败: " + e.getMessage());
         }
+    }
+
+    @GetMapping("/popular/{limit}")
+    @ApiOperation("获取热门笔记ID列表")
+    public BaseResponse<List<Long>> getPopularNoteIds(
+            @PathVariable Integer limit,
+            @RequestParam(defaultValue = "5") Integer minLikes,
+            @RequestParam(defaultValue = "30") Integer days) {
+
+        List<Long> popularNoteIds = likeService.getPopularNoteIds(limit, minLikes, days);
+        return ResultUtils.success(popularNoteIds);
+    }
+
+    @ApiOperation("分页获取热门笔记ID列表")
+    @GetMapping("/popular/page")
+    public BaseResponse<List<Long>> getPopularNoteIdsByPage(
+            @RequestParam(defaultValue = "1") Long current,
+            @RequestParam(defaultValue = "10") Long size,
+            @RequestParam(defaultValue = "5") Integer minLikes,
+            @RequestParam(defaultValue = "30") Integer days) {
+
+        List<Long> popularNoteIds = likeService.getPopularNoteIdsByPage(current, size, minLikes, days);
+        return ResultUtils.success(popularNoteIds);
+    }
+
+    @ApiOperation("获取热门笔记总数")
+    @GetMapping("/popular/count")
+    public BaseResponse<Long> getPopularNotesCount(
+            @RequestParam(defaultValue = "5") Integer minLikes,
+            @RequestParam(defaultValue = "30") Integer days) {
+
+        Long count = likeService.getPopularNotesCount(minLikes, days);
+        return ResultUtils.success(count);
     }
 } 

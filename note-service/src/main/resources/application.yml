@@ -6,6 +6,9 @@ spring:
     name: note-service #服务名称
   profiles:
     active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     # 主数据源配置（note_db）
     primary:
@@ -22,10 +25,26 @@ spring:
   #session过期时间
   session:
     timeout: 86400
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-
+  redis:
+    host: 192.168.18.129
+    port: 6379
+    password: 1617929300
+    database: 1
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    # 序列化配置
+    jackson:
+      default-property-inclusion: non_null
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+      serialization:
+        write-dates-as-timestamps: false
+      deserialization:
+        fail-on-unknown-properties: false
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -62,6 +81,8 @@ logging:
     dateformat: HH:mm:ss:SSS
   file:
     path: "logs/${spring.application.name}"
+
+# Knife4j 配置
 knife4j:
   enable: true
   openapi:
@@ -74,3 +95,21 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.example.noteservice.controller
+
+# Actuator 配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics  # 只暴露需要的端点
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always  # 健康检查详情
+  health:
+    rabbit:
+      enabled: false  # 禁用 RabbitMQ 健康检查
+    db:
+      enabled: true   # 启用数据库健康检查
+    redis:
+      enabled: true   # 启用 Redis 健康检查

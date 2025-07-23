@@ -4,7 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b891cbfe-2290-4b95-9f06-2dafababc826" name="Changes" comment="" />
+    <list default="true" id="b891cbfe-2290-4b95-9f06-2dafababc826" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-20.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-21.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-22.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.1.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.10.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.11.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.2.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.3.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.4.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.6.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.7.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.8.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-20.9.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-21.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-22.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.1.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.10.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.11.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.12.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.2.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.3.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.4.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.6.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.7.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.8.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-20.9.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-21.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-22.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/actuator/CustomHealthIndicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/actuator/CustomInfoContributor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/actuator/CustomMetricsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/RedisCacheService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/impl/RedisCacheServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/src/main/java/com/example/common/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/src/main/java/com/example/common/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/src/main/java/com/example/common/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/src/main/java/com/example/common/filter/TokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/target/classes/com/example/common/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/target/classes/com/example/common/config/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/target/classes/com/example/common/filter/TokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/target/classes/com/example/common/filter/TokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/config/LikeServiceShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/config/LikeServiceShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/mapper/LikeStatisticsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/mapper/LikeStatisticsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/service/LikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/service/impl/LikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/java/com/example/likeservice/service/impl/LikeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/src/main/resources/mapper/LikeStatisticsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/src/main/resources/mapper/LikeStatisticsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/config/LikeServiceShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/config/LikeServiceShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/controller/LikeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/controller/LikeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/mapper/LikeStatisticsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/mapper/LikeStatisticsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/service/LikeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/service/LikeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/service/impl/LikeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/com/example/likeservice/service/impl/LikeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-service/target/classes/mapper/LikeStatisticsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/like-service/target/classes/mapper/LikeStatisticsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/auth-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/auth-service/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-12.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-13.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/auth-service/spring.log.2025-07-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/like-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/like-service/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/like-service/spring.log.2025-07-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/note-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/note-service/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-13.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/note-service/spring.log.2025-07-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/NoteServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/NoteServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/client/LikeServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/client/LikeServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/config/TestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/mapper/NoteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/mapper/NoteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/com/example/noteservice/service/impl/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/resources/mapper/NoteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/resources/mapper/NoteMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/NoteServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/NoteServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/client/LikeServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/client/LikeServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/config/TestConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/controller/NoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/controller/NoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/mapper/NoteMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/mapper/NoteMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/service/NoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/service/NoteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/service/impl/NoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/com/example/noteservice/service/impl/NoteServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/target/classes/mapper/NoteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/target/classes/mapper/NoteMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +113,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -30,11 +128,15 @@
     </option>
   </component>
   <component name="ProjectId" id="2zOxuCSQIzmAc131ePhvrxiXbfj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -61,6 +163,7 @@
       <recent name="D:\code\JavaCode\SecondIntern\note-service\src\main\java\com\example\noteservice\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\JavaCode\SecondIntern\microservices" />
       <recent name="D:\code\JavaCode\SecondIntern" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -194,7 +297,7 @@
       </method>
     </configuration>
     <configuration name="SecondInternApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" value="local" />
+      <option name="ACTIVE_PROFILES" />
       <module name="note-tag-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.notetagbatchmanagement.SecondInternApplication" />
       <method v="2">
@@ -251,11 +354,32 @@
       <workItem from="1752387723644" duration="23323000" />
       <workItem from="1752418399142" duration="2578000" />
       <workItem from="1752475386027" duration="18183000" />
-      <workItem from="1752504669669" duration="4394000" />
+      <workItem from="1752504669669" duration="5010000" />
+      <workItem from="1752572555300" duration="602000" />
+      <workItem from="1752835714227" duration="1442000" />
+      <workItem from="1752886171381" duration="7241000" />
+      <workItem from="1752974223840" duration="15054000" />
+      <workItem from="1753068686044" duration="7878000" />
+      <workItem from="1753148748419" duration="16181000" />
+      <workItem from="1753226849504" duration="8310000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

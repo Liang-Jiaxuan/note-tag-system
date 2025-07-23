@@ -3,6 +3,8 @@ package com.example.likeservice.service;
 import com.example.likeservice.domain.dto.LikeRequest;
 import com.example.likeservice.domain.dto.LikeResponse;
 
+import java.util.List;
+
 public interface LikeService {
     
     /**
@@ -24,4 +26,9 @@ public interface LikeService {
      * 检查用户是否已点赞
      */
     Boolean isUserLiked(Long noteId, Long userId);
-} 
+
+    List<Long> getPopularNoteIds(Integer limit, Integer minLikes, Integer days);
+
+    List<Long> getPopularNoteIdsByPage(Long current, Long size, Integer minLikes, Integer days);
+    Long getPopularNotesCount(Integer minLikes, Integer days);
+}

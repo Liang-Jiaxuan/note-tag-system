@@ -55,6 +55,7 @@ public class LikeServiceShiroConfig {
         filterChainDefinitionMap.put("/test/**", "anon");  // 测试接口白名单
         filterChainDefinitionMap.put("/api/likes/test/**", "anon");  // 测试接口白名单
         filterChainDefinitionMap.put("/api/likes/count/**", "anon");  // 点赞数量接口允许匿名访问
+        filterChainDefinitionMap.put("/api/likes/popular/**", "anon");  // 热门笔记接口允许匿名访问
         filterChainDefinitionMap.put("/doc.html", "anon");
         filterChainDefinitionMap.put("/webjars/**", "anon");
         filterChainDefinitionMap.put("/v3/api-docs/**", "anon");
@@ -62,7 +63,9 @@ public class LikeServiceShiroConfig {
         filterChainDefinitionMap.put("/swagger-ui/**", "anon");
 
         // 2. 配置需要token认证的路径
-        filterChainDefinitionMap.put("/api/**", "token");
+        filterChainDefinitionMap.put("/api/likes/toggle", "token");  // 点赞/取消点赞
+        filterChainDefinitionMap.put("/api/likes/status/**", "token");  // 获取点赞状态
+        filterChainDefinitionMap.put("/api/likes/check/**", "token");  // 检查用户是否已点赞
 
         // 3. 其他路径需要认证
         filterChainDefinitionMap.put("/**", "authc");

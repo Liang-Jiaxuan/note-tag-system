@@ -92,16 +92,26 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/test/**", "anon");  // 测试接口白名单
         filterChainDefinitionMap.put("/api/notes/test/**", "anon");  // note-service测试接口
         filterChainDefinitionMap.put("/api/likes/test/**", "anon");  // like-service测试接口
-        
+
+        // Actuator 端点 - 不需要认证
+        filterChainDefinitionMap.put("/actuator/**", "anon");
+        filterChainDefinitionMap.put("/actuator/health", "anon");
+        filterChainDefinitionMap.put("/actuator/info", "anon");
+        filterChainDefinitionMap.put("/actuator/metrics/**", "anon");
+
         // note-service 公开接口
         filterChainDefinitionMap.put("/api/notes", "anon");  // 获取所有笔记接口允许匿名访问
         filterChainDefinitionMap.put("/api/notes/page", "anon");  // 分页查询接口允许匿名访问
         filterChainDefinitionMap.put("/api/notes/page/all", "anon");  // 分页查询所有接口允许匿名访问
         filterChainDefinitionMap.put("/api/tags", "anon");  // 获取所有标签接口允许匿名访问
-        
+        filterChainDefinitionMap.put("/api/notes/popular", "anon");  // 获取热门笔记列表
+        filterChainDefinitionMap.put("/api/notes/popular/page", "anon");  // 分页查询热门笔记
+
+
         // like-service 公开接口
         filterChainDefinitionMap.put("/api/likes/count/**", "anon");  // 点赞数量接口允许匿名访问
-        
+        filterChainDefinitionMap.put("/api/likes/popular/**", "anon");  // 所有热门笔记相关接口
+
         // auth-service 公开接口
         filterChainDefinitionMap.put("/api/v1/auth/login", "anon");
         filterChainDefinitionMap.put("/api/v1/auth/register", "anon");

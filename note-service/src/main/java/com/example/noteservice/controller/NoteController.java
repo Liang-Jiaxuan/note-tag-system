@@ -13,12 +13,12 @@ import com.example.noteservice.domain.dto.CreateNoteDTO;
 import com.example.noteservice.domain.dto.NoteDTO;
 import com.example.noteservice.domain.po.Note;
 import com.example.noteservice.service.NoteService;
+import com.example.noteservice.service.RedisCacheService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -40,6 +40,9 @@ public class NoteController {
     
     @Resource
     private LikeServiceClient likeServiceClient;
+
+    @Resource
+    private RedisCacheService redisCacheService;
 
     @ApiOperation("创建笔记")
     @PostMapping
@@ -105,8 +108,8 @@ public class NoteController {
     @GetMapping("/page")
 //    @RequiresPermission("note:view:public")
     public BaseResponse<IPage<NoteDTO>> getNotesByPage(
-            @RequestParam(defaultValue = "1") Integer current,
-            @RequestParam(defaultValue = "10") Integer size,
+            @RequestParam(defaultValue = "1") Long current,
+            @RequestParam(defaultValue = "10") Long size,
             @RequestParam(required = false) String keyword) {
         Page<Note> page = new Page<>(current, size);
         IPage<NoteDTO> result = noteService.getNotesByPage(page, keyword);
@@ -117,8 +120,8 @@ public class NoteController {
     @GetMapping("/page/all")
 //    @RequiresPermission("note:view:public")
     public BaseResponse<IPage<NoteDTO>> getAllNotesByPage(
-            @RequestParam(defaultValue = "1") Integer current,
-            @RequestParam(defaultValue = "10") Integer size) {
+            @RequestParam(defaultValue = "1") Long current,
+            @RequestParam(defaultValue = "10") Long size) {
         Page<Note> page = new Page<>(current, size);
         IPage<NoteDTO> result = noteService.getNotesByPage(page);
         return ResultUtils.success(result);
@@ -158,6 +161,67 @@ public class NoteController {
             log.error("Feign调用like-service失败", e);
             return ResultUtils.error(ErrorCode.SYSTEM_ERROR, "Feign调用like-service失败: " + e.getMessage());
         }
+    }
+
+    /**
+     * 该接口无法查询点赞数为0的笔记,
+     * 因为在数据库中只有点赞后才会生成点赞记录,进而进行点赞统计
+     * 而如果某个笔记没有被点过赞, 那就不会出现在点赞统计的表中
+     * 该接口最终就是在点赞统计表中查询笔记id的
+     * @param limit 指定要获取多少个满足条件(点赞数和最近几天)的笔记
+     * @param minLikes 指定多少赞
+     * @param days 指定最近多少天
+     * @return
+     */
+    @ApiOperation("获取热门笔记列表")
+    @GetMapping("/popular")
+    public BaseResponse<List<NoteDTO>> getPopularNotes(
+            @RequestParam(defaultValue = "20") Integer limit,
+            @RequestParam(defaultValue = "5") Integer minLikes,
+            @RequestParam(defaultValue = "30") Integer days) {
+
+        List<NoteDTO> popularNotes = noteService.getPopularNotes(limit, minLikes, days);
+        return ResultUtils.success(popularNotes);
+    }
+
+    /**
+     * 该接口无法查询点赞数为0的笔记,
+     * 因为在数据库中只有点赞后才会生成点赞记录,进而进行点赞统计
+     * 而如果某个笔记没有被点过赞, 那就不会出现在点赞统计的表中
+     * 该接口最终就是在点赞统计表中查询笔记id的
+     * @param current
+     * @param size
+     * @param minLikes
+     * @param days
+     * @return
+     */
+    @ApiOperation("分页查询热门笔记")
+    @GetMapping("/popular/page")
+    public BaseResponse<IPage<NoteDTO>> getPopularNotesByPage(
+            @RequestParam(defaultValue = "1") Long current,
+            @RequestParam(defaultValue = "10") Long size,
+            @RequestParam(defaultValue = "5") Integer minLikes,
+            @RequestParam(defaultValue = "30") Integer days) {
+
+        Page<Note> page = new Page<>(current, size);
+        IPage<NoteDTO> result = noteService.getPopularNotesByPage(page, minLikes, days);
+        return ResultUtils.success(result);
+    }
+
+    @ApiOperation("清除所有笔记缓存")
+    @PostMapping("/cache/clear")
+    @RequiresPermission("note:manage")
+    public BaseResponse<String> clearAllCache() {
+        redisCacheService.clearAllNoteCache();
+        return ResultUtils.success("所有笔记缓存已清除");
+    }
+
+    @ApiOperation("清除指定笔记缓存")
+    @PostMapping("/cache/clear/{noteId}")
+    @RequiresPermission("note:manage")
+    public BaseResponse<String> clearNoteCache(@PathVariable Long noteId) {
+        redisCacheService.deleteNoteCache(noteId);
+        return ResultUtils.success("笔记缓存已清除，ID: " + noteId);
     }
 
     // 验证是否为笔记创建者
