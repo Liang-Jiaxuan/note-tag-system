@@ -34,6 +34,8 @@ public class NoteTagServiceImpl implements NoteTagService {
     @Resource
     private TagMapper tagMapper;
 
+
+
     @Override
     @Transactional
     public Boolean batchAddTagsToNotes(List<Long> noteIds, List<Long> tagIds) {

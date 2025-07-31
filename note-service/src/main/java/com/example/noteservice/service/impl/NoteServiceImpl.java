@@ -12,8 +12,10 @@ import com.example.noteservice.actuator.CustomMetricsConfig;
 import com.example.noteservice.client.LikeServiceClient;
 import com.example.noteservice.domain.dto.CreateNoteDTO;
 import com.example.noteservice.domain.dto.NoteDTO;
+import com.example.noteservice.domain.event.NoteCreatedEvent;
 import com.example.noteservice.domain.po.Note;
 import com.example.noteservice.mapper.NoteMapper;
+import com.example.noteservice.service.KafkaEventService;
 import com.example.noteservice.service.NoteService;
 import com.example.noteservice.service.RedisCacheService;
 import io.micrometer.core.instrument.Timer;
@@ -54,6 +56,10 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
 
     @Resource
     private CustomMetricsConfig customMetricsConfig;
+
+    @Resource
+    private KafkaEventService kafkaEventService;
+
     @Override
     @Transactional
     public NoteDTO createNote(CreateNoteDTO createNoteDTO) {
@@ -80,6 +86,22 @@ public class NoteServiceImpl extends ServiceImpl<NoteMapper, Note> implements No
 
             // 保存笔记
             save(note);
+
+            // 发布笔记创建事件到Kafka
+            try {
+                NoteCreatedEvent event = new NoteCreatedEvent(
+                        note.getId(),
+                        currentUserId,
+                        note.getTitle(),
+                        note.getContent(),
+                        note.getCreatedAt()
+                );
+                kafkaEventService.publishNoteCreatedEvent(event);
+                log.info("笔记创建事件已发布: noteId={}, eventId={}", note.getId(), event.getEventId());
+            } catch (Exception e) {
+                log.error("发布笔记创建事件失败: noteId={}, error={}", note.getId(), e.getMessage(), e);
+                // 不影响主流程，继续执行
+            }
 
             // 增加计数器
             customMetricsConfig.incrementNoteCreate();

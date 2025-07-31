@@ -99,6 +99,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/actuator/info", "anon");
         filterChainDefinitionMap.put("/actuator/metrics/**", "anon");
 
+        // 异步处理统计接口 - 不需要认证
+        filterChainDefinitionMap.put("/api/async/**", "anon");
+
         // note-service 公开接口
         filterChainDefinitionMap.put("/api/notes", "anon");  // 获取所有笔记接口允许匿名访问
         filterChainDefinitionMap.put("/api/notes/page", "anon");  // 分页查询接口允许匿名访问

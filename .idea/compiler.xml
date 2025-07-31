@@ -7,12 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="auth-service" />
-        <module name="common-service" />
         <module name="note-service" />
         <module name="eureka-server" />
-        <module name="like-service" />
-        <module name="gateway-service" />
+        <module name="auth-service" />
       </profile>
       <profile name="Annotation profile for monolithic-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -23,6 +20,14 @@
           <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.7.18/spring-boot-configuration-processor-2.7.18.jar" />
         </processorPath>
         <module name="monolithic-service" />
+      </profile>
+      <profile name="Annotation profile for gateway-service" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gateway-service" />
+        <module name="like-service" />
+        <module name="common-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
