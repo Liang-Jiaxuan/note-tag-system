@@ -70,6 +70,12 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
         spring.json.type.mapping: note-created:com.example.noteservice.domain.event.NoteCreatedEvent
+        # 重试配置
+        spring.kafka.listener.ack-mode: manual_immediate
+        # 死信队列配置
+        spring.kafka.listener.missing-topics-fatal: false
+        # 错误处理
+        spring.kafka.listener.default-error-handler: true
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler

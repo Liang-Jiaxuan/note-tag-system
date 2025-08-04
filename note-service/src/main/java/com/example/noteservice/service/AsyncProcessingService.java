@@ -25,7 +25,7 @@ public interface AsyncProcessingService {
      * 获取已处理笔记数量
      * @return 笔记数量
      */
-    int getProcessedNotesCount();
+    long getProcessedNotesCount();
     
     /**
      * 重置统计信息
